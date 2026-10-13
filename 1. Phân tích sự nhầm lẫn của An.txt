@@ -1,0 +1,7 @@
+1. Phân tích sự nhầm lẫn của An
+An đã nhầm lẫn giữa tìm kiếm vị trí hoặc tên tệp tin và tìm kiếm nội dung bên trong tệp tin.
+- Get-ChildItem: Dùng để liệt kê các tệp và thư mục. Tham số -Recurse cho phép tìm kiếm đệ quy trong các thư mục con, còn -Filter "*404*" lọc tên tệp hoặc thư mục có chứa chuỗi 404, chứ không tìm chuỗi 404 bên trong nội dung tệp.
+- Select-String: Dùng để tìm kiếm chuỗi ký tự hoặc mẫu văn bản bên trong nội dung tệp, phù hợp để lọc các dòng log chứa thông báo lỗi.
+Vì vậy, để tìm các dòng chứa lỗi trong access.log, An cần sử dụng Select-String thay vì Get-ChildItem.
+2. Kết luận
+Get-ChildItem phù hợp khi cần tìm tệp và thư mục, trong khi Select-String phù hợp khi cần tìm nội dung văn bản. Sử dụng đúng lệnh giúp kỹ sư nhanh chóng xác định vị trí lỗi trong tệp log.

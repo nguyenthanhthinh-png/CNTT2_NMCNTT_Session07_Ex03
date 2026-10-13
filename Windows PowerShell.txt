@@ -1,0 +1,11 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\thanhthinh> Get-ChildItem -Recurse -Filter "*404*"
+PS C:\Users\thanhthinh> Select-String -Path .\access.log -Pattern "error"
+
+access.log:3:500 ERROR Database failure
+access.log:5:ERROR Server timeout
+
+
+PS C:\Users\thanhthinh>
